@@ -24,7 +24,7 @@ $(document).ready(function() {
     // Add Client Form Submission
     $('#addClientForm').submit(function(event) {
         event.preventDefault();
-        var formData = {
+        let formData = {
             name: $('#name').val(),
             email: $('#email').val(),
             phone: $('#phone').val()
@@ -38,7 +38,7 @@ $(document).ready(function() {
 
     // Delete Client Button Click (Event delegation)
     $('#clientList').on('click', '.delete-client', function() {
-        var clientId = $(this).closest('li').data('id');
+        let clientId = $(this).closest('li').data('id');
         $.ajax({
             url: `${url}/${clientId}`,
             type: 'DELETE',
